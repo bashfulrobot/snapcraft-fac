@@ -11,7 +11,7 @@ grade: stable
 confinement: strict
 
 plugs:
-  fac-config:
+  dot-fac-yml:
     interface: personal-files
     read:
       - $HOME/.fac.yml
@@ -22,7 +22,7 @@ apps:
     plugs:
       - network
       - home
-      - fac-config
+      - dot-fac-yml
 
 parts:
   # go:
