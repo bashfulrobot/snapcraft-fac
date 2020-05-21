@@ -1,0 +1,35 @@
+name: fac
+base: core18
+version: "2.0.0"
+# https://github.com/snapcore/snapd/blob/master/spdx/licenses.go
+license: "MIT"
+summary: Easy-to-use CUI for fixing git conflicts
+description: |
+  Fac is an easy-to-use CUI for fixing git conflicts written in Go.
+
+grade: stable
+confinement: strict
+
+plugs:
+  fac-config:
+    interface: personal-files
+    read:
+      - $HOME/.fac.yml
+
+apps:
+  fac:
+    command: bin/fac
+    plugs:
+      - network
+      - home
+      - fac-config
+
+parts:
+  # go:
+  #     source-tag: go1.10.1
+  fac:
+    plugin: go
+    # after: [go]
+    source: https://github.com/mkchoi212/fac.git
+    source-type: git
+    go-importpath: github.com/mkchoi212/fac
