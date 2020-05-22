@@ -14,14 +14,13 @@ Currently waiting on:
 
 This snap currently requires you to manually connect the interfaces.
 
-```
+``` shell
 snap connect fac:dot-fac-yml :personal-files
 snap connect fac:dot-gitconfig :personal-files
 ```
 
 ## Build Notes
 
-* This snap requires snapcraft v4, so you need to use multipass when building (not lxd). So `snapcraft --debug` will work, whereas `snapcraft --use-lxd --debug` will not.
-* For some reason snapcraft v4 requires dependencies to be staged with the Go plugin, whereas v3 did not. Forum post open for clarification.
+* For some reason snapcraft v4 requires dependencies to be staged with the Go plugin, whereas v3 did not.
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/fac)
