@@ -6,8 +6,16 @@ This repo is the snap dev repo for the [fac](https://github.com/mkchoi212/fac) p
 
 🚧 This is currently a "work in progress". Please see the `issues` for current tasks and blockers.
 
+## Interfaces
+
 This snap currently requires you to manually connect the interfaces.
 
 ```
-snap connect fac:fac-config :personal-files
+snap connect fac:dot-fac-yml :personal-files
+snap connect fac:dot-gitconfig :personal-files
 ```
+
+## Build Notes
+
+* This snap requires snapcraft v4, so you need to use multipass when building (not lxd). So `snapcraft --debug` will work, whereas `snapcraft --use-lxd --debug` will not.
+* For some reason snapcraft v4 requires dependencies to be staged with the Go plugin, whereas v3 did not. Forum post open for clarification.
