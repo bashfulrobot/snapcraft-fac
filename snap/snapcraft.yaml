@@ -17,6 +17,9 @@ plugs:
     interface: personal-files
     read:
       - $HOME/.fac.yml
+  dot-gitconfig:
+    interface: personal-files
+    read: [$HOME/.gitconfig]
 
 apps:
   fac:
@@ -25,6 +28,7 @@ apps:
       - network
       - home
       - dot-fac-yml
+      - dot-gitconfig
 
 parts:
   # go:
@@ -35,3 +39,5 @@ parts:
     source: https://github.com/mkchoi212/fac.git
     source-type: git
     go-importpath: github.com/mkchoi212/fac
+    stage-packages:
+      - git
