@@ -8,7 +8,6 @@ This repo is the snap dev repo for the [fac](https://github.com/mkchoi212/fac) p
 
 Currently waiting on:
 
-* name dispute in the snapstore
 * requesting access to the `personal-files` interface in the snapstore
 
 ## Interfaces
