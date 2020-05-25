@@ -20,6 +20,9 @@ plugs:
   dot-gitconfig:
     interface: personal-files
     read: [$HOME/.gitconfig]
+  dot-config-gitconfig:
+    interface: personal-files
+    read: [$HOME/.config/git/config]
 
 apps:
   fac:
@@ -29,6 +32,7 @@ apps:
       - home
       - dot-fac-yml
       - dot-gitconfig
+      - dot-config-gitconfig
 
 parts:
   fac:
